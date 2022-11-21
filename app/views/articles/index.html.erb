@@ -11,6 +11,16 @@
               <p><%= article.description %></p>
             </div>
           </div>
+          <% if user_signed_in? %>
+              <div class="user-actions">
+                <%= link_to edit_article_path(article), class: 'btn btn-flat' do %>
+                  Modifier cet article
+                <% end %>
+                <%= button_to "Supprimer l'article", article_path(article) ,
+                        method: :delete,
+                        data: { confirm: "Confirmer la suppression de l'article ?" }, class: "btn btn-flat" %>
+              </div>
+          <% end %>
         </div>
       <% end %>
     </div>
