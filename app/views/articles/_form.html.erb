@@ -1,0 +1,23 @@
+<div class="form-wrapper new-yacht-form">
+    <%= simple_form_for(article) do |f| %>
+      <div class="form-content">
+        <div class="form-input">
+          <%= f.input :titre,
+                      autofocus: true %>
+        </div>
+
+        <div class="form-input">
+          <%= f.input :description,
+                      autofocus: true %>
+        </div>
+
+        <!--<div class="form-input">
+          <%= f.input :photo, as: :file, label: "featured photo" %>
+        </div>-->
+
+        <div class= "form-button">
+          <%= f.button :submit, "créer l'article", class: "form-button-text"%>
+        </div>
+      </div>
+    <% end %>
+  </div>
