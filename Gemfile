@@ -54,3 +54,4 @@ gem "sassc-rails"
 gem "devise"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
+gem "carrierwave"
