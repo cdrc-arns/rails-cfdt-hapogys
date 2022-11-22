@@ -6,7 +6,17 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all.order('created_at DESC')
+
+
+    if search_term = params[:search]
+      search_term = params[:search].downcase.gsub(/\s+/, "")
+      @articles = Article.all.select { |article|
+        article.titre.downcase.include?(search_term) ||
+          article.description.downcase.include?(search_term)
+      }
+    else
+      @articles = Article.all.order('created_at DESC')
+    end
   end
 
   def edit
