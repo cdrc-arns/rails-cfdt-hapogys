@@ -1,0 +1,122 @@
+// navbar layout
+.navbar {
+  flex-grow: 0;
+  background-color: white;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  margin-bottom: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
+}
+
+// navbar logo
+.nav-logo {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-brand {
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.navbar-brand p {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #DF5A25;
+  font-weight: 600;
+}
+
+// navbar links
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links li {
+  list-style-type: none;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  :hover {
+    color: #DF5A25;
+    text-decoration: underline;
+  }
+}
+
+.nav-item a {
+  transition: 0,4s ease-in-out;
+}
+
+// unlog button
+.log-btn {
+  background-color: #DF5A25;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+.log-btn:hover {
+  color: white;
+}
+
+// navbar search
+.search {
+  margin-right: 10px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-item {
+  margin-right: 5px;
+}
+
+.search-field {
+  height: 18px;
+  font-size: 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.search-btn {
+  background-color: #DF5A25;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  height: 24px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.search-btn:hover {
+  color: white;
+}
