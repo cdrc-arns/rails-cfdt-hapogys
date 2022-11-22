@@ -7,38 +7,41 @@
     <% end %>
 </div>
 
-<% if user_signed_in? %>
-  <%= link_to "Créer un nouvel article", new_article_path, class: "btn btn-flat" %>
-<% end %>
+<h1>Articles index</h1>
+<div class="articles-container">
+  <% if user_signed_in? %>
+    <%= link_to "Créer un nouvel article", new_article_path, class: "btn btn-flat" %>
+  <% end %>
 
-<div class="card-container">
-      <% @articles.each do |article| %>
-        <div class="card-wrapper">
-          <div class="card">
-            <div class="card-front">
-              <% if article.photo.key %>
-                <%= cl_image_tag article.photo.key, class: "article-img" %>
-              <% else %>
-                <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669048484/vtnlkwtj3xuyqmeicgag.jpg" alt="#">
-              <% end %>
-
-              <p><%= article.titre %></p>
-              <p><%= article.description %></p>
-
-                <%= link_to "Ouvrir le document", article.file_url, target: :_blank, class: "dl-link" %>
-
-            </div>
-          </div>
-          <% if user_signed_in? %>
-              <div class="user-actions">
-                <%= link_to edit_article_path(article), class: 'btn btn-flat' do %>
-                  Modifier cet article
+  <div class="card-container">
+        <% @articles.each do |article| %>
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-front">
+                <% if article.photo.key %>
+                  <%= cl_image_tag article.photo.key, class: "article-img" %>
+                <% else %>
+                  <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669048484/vtnlkwtj3xuyqmeicgag.jpg" alt="#">
                 <% end %>
-                <%= button_to "Supprimer l'article", article_path(article) ,
-                        method: :delete,
-                        data: { confirm: "Confirmer la suppression de l'article ?" }, class: "btn btn-flat" %>
+
+                <p><%= article.titre %></p>
+                <p><%= article.description %></p>
+
+                  <%= link_to "Ouvrir le document", article.file_url, target: :_blank, class: "dl-link" %>
+
               </div>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+            </div>
+            <% if user_signed_in? %>
+                <div class="user-actions">
+                  <%= link_to edit_article_path(article), class: 'btn btn-flat' do %>
+                    Modifier cet article
+                  <% end %>
+                  <%= button_to "Supprimer l'article", article_path(article) ,
+                          method: :delete,
+                          data: { confirm: "Confirmer la suppression de l'article ?" }, class: "btn btn-flat" %>
+                </div>
+            <% end %>
+          </div>
+        <% end %>
+  </div>
+</div>

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root to: 'articles#index'
   resources :users, only: :show
   resources :articles
+  resources :representatives
 end

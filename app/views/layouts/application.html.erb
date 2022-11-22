@@ -11,6 +11,7 @@
   </head>
 
   <body>
+  <%= render "shared/navbar" %>
     <p class="navbar-text float-right">
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
