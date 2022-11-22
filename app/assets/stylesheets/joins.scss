@@ -1,6 +1,8 @@
 // Place all the styles related to the Joins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// JOINS INDEX
 .joins-container {
   margin-top: 80px;
   margin-bottom: 40px;
@@ -43,4 +45,30 @@
 
 .dl-button a:hover {
   color: black;
+}
+
+// modify button
+.user-actions a {
+  font-size: 18px;
+  color: black;
+}
+
+.user-actions a:hover {
+  color: #DF5A25;
+}
+
+// JOINS EDIT
+.joins-edit-container {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.joins-edit-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

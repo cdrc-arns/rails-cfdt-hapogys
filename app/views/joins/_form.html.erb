@@ -1,14 +1,14 @@
-<div class="form-wrapper new-yacht-form">
+<div class="form-wrapper">
     <%= simple_form_for(join) do |f| %>
       <div class="form-content">
-
+        <p>Ajouter un document :</p>
         <div class="form-input">
-          <%= f.input :file, as: :file %>
-        </div>
-
-        <div class= "form-button">
-          <%= f.button :submit, "valider", class: "form-button-text"%>
+          <%= f.input :file, label: 'Pdf', as: :file %>
         </div>
       </div>
+
+      <div class= "form-button">
+        <%= f.button :submit, "Valider", class: "form-button-text"%>
+      </div>
     <% end %>
-  </div>
+</div>
