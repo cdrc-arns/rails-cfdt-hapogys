@@ -1,0 +1,29 @@
+.footer-container {
+  flex-grow: 0;
+  background-color: #DF5A25;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.foot-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot-links li, .nav-items a {
+  list-style-type: none;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  :hover {
+    color: black;
+  }
+}
