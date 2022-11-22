@@ -1,26 +1,22 @@
-<h1>Join index</h1>
-<% if user_signed_in? %>
-    <%= link_to "Ajouter un document", new_join_path, class: "btn btn-flat" %>
-<% end %>
-
-<div class="card-container">
-        <% @joins.each do |join| %>
-          <div class="card-wrapper">
-            <div class="card">
-              <div class="card-front">
-                  <%= link_to "Télécharger le formulaire d'adhésion", join.file_url, target: :_blank, class: "dl-link" %>
-              </div>
-            </div>
-            <% if user_signed_in? %>
-                <div class="user-actions">
-                  <%= link_to edit_join_path(join), class: 'btn btn-flat' do %>
-                    Modifier le document
-                  <% end %>
-                  <%= button_to "Supprimer le document", join_path(join) ,
-                          method: :delete,
-                          data: { confirm: "Confirmer la suppression du document ?" }, class: "btn btn-flat" %>
-                </div>
-            <% end %>
-          </div>
-        <% end %>
+<div class="joins-container">
+  <div class="banner">
+    <%= image_tag "banner.jpg" %>
   </div>
+
+  <div class="button-container">
+          <% @joins.each do |join| %>
+            <div class="button-wrapper">
+              <div class="dl-button">
+                <%= link_to "Télécharger le formulaire d'adhésion", join.file_url, target: :_blank, class: "dl-link" %>
+              </div>
+              <% if user_signed_in? %>
+                  <div class="user-actions">
+                    <%= link_to edit_join_path(join), class: 'btn btn-flat' do %>
+                      Modifier le document
+                    <% end %>
+                  </div>
+              <% end %>
+            </div>
+          <% end %>
+    </div>
+</div>

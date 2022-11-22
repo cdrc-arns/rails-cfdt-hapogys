@@ -9,6 +9,8 @@
   height: 80px;
   margin-bottom: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
+  position: fixed;
+  width: 100%;
 }
 
 // navbar logo
@@ -57,7 +59,7 @@
 .nav-links li {
   list-style-type: none;
   margin: 10px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
@@ -76,13 +78,14 @@
   background-color: #DF5A25;
   border: none;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 18px;
+  height: 30px;
   cursor: pointer;
-  color: black;
+  color: white;
 }
 
 .log-btn:hover {
-  color: white;
+  color: black;
 }
 
 // navbar search
@@ -101,7 +104,7 @@
 }
 
 .search-field {
-  height: 18px;
+  height: 20px;
   font-size: 16px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -111,12 +114,13 @@
   border: none;
   border-radius: 5px;
   font-size: 18px;
-  height: 24px;
+  height: 30px;
   text-align: center;
   cursor: pointer;
+  color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .search-btn:hover {
-  color: white;
+  color: black;
 }

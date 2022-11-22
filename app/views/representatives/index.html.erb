@@ -1,34 +1,36 @@
-<h1>Representative index</h1>
-<% if user_signed_in? %>
-    <%= link_to "Créer un nouvel élu", new_representative_path, class: "btn btn-flat" %>
-  <% end %>
+<div class="representatives-container">
+  <h1>Representative index</h1>
+  <% if user_signed_in? %>
+      <%= link_to "Créer un nouvel élu", new_representative_path, class: "btn btn-flat" %>
+    <% end %>
 
-  <div class="card-container">
-        <% @representatives.each do |representative| %>
-          <div class="card-wrapper">
-            <div class="card">
-              <div class="card-front">
-                <% if representative.photo.key %>
-                  <%= cl_image_tag representative.photo.key, class: "article-img" %>
-                <% else %>
-                  <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669048484/vtnlkwtj3xuyqmeicgag.jpg" alt="#">
-                <% end %>
-
-                <p><%= representative.titre %></p>
-                <p><%= representative.description %></p>
-
-              </div>
-            </div>
-            <% if user_signed_in? %>
-                <div class="user-actions">
-                  <%= link_to edit_representative_path(representative), class: 'btn btn-flat' do %>
-                    Modifier cet élu
+    <div class="card-container">
+          <% @representatives.each do |representative| %>
+            <div class="card-wrapper">
+              <div class="card">
+                <div class="card-front">
+                  <% if representative.photo.key %>
+                    <%= cl_image_tag representative.photo.key, class: "article-img" %>
+                  <% else %>
+                    <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669048484/vtnlkwtj3xuyqmeicgag.jpg" alt="#">
                   <% end %>
-                  <%= button_to "Supprimer l'élu", representative_path(representative) ,
-                          method: :delete,
-                          data: { confirm: "Confirmer la suppression de l'élu ?" }, class: "btn btn-flat" %>
+
+                  <p><%= representative.titre %></p>
+                  <p><%= representative.description %></p>
+
                 </div>
-            <% end %>
-          </div>
-        <% end %>
-  </div>
+              </div>
+              <% if user_signed_in? %>
+                  <div class="user-actions">
+                    <%= link_to edit_representative_path(representative), class: 'btn btn-flat' do %>
+                      Modifier cet élu
+                    <% end %>
+                    <%= button_to "Supprimer l'élu", representative_path(representative) ,
+                            method: :delete,
+                            data: { confirm: "Confirmer la suppression de l'élu ?" }, class: "btn btn-flat" %>
+                  </div>
+              <% end %>
+            </div>
+          <% end %>
+    </div>
+</div>
