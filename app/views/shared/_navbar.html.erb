@@ -2,4 +2,15 @@
   <%= link_to "Actualités", root_path, class: "nav-link" %>
   <%= link_to "Vos élus", representatives_path, class: "nav-link" %>
   <%= link_to "Rejoignez nous", joins_path, class: "nav-link" %>
+
+  <div class="actions">
+    <% if user_signed_in? %>
+      <div class="logout-btn">
+        <%= button_to "Déconnexion", destroy_user_session_path, method: :delete, class: "log-btn"  %>
+      </div>
+    <% else %>
+      <div class="ghost">
+      </div>
+    <% end %>
+  </div>
 </div>
