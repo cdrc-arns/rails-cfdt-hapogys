@@ -1,8 +1,16 @@
+<div class="banner">
+</div>
+<div class="new-btn-container">
+  <div class="new-btn">
+    <% if user_signed_in? %>
+      <%= link_to "Nouvel élu", new_representative_path, class: "btn btn-flat" %>
+    <% end %>
+  </div>
+</div>
+
 <div class="representatives-container">
   <h1>Representative index</h1>
-  <% if user_signed_in? %>
-      <%= link_to "Créer un nouvel élu", new_representative_path, class: "btn btn-flat" %>
-    <% end %>
+
 
     <div class="card-container">
           <% @representatives.each do |representative| %>

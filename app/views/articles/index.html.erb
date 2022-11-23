@@ -1,9 +1,16 @@
-<div class="articles-container">
-<h1>Articles index</h1>
-  <% if user_signed_in? %>
-    <%= link_to "Créer un nouvel article", new_article_path, class: "btn btn-flat" %>
-  <% end %>
+<div class="banner">
+  <%= image_tag "banner.jpg" %>
+</div>
 
+<div class="new-btn-container">
+  <div class="new-btn">
+    <% if user_signed_in? %>
+      <%= link_to "Nouvel article", new_article_path, class: "btn btn-flat" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="articles-container">
   <div class="card-container">
         <% @articles.each do |article| %>
           <div class="card-wrapper">
