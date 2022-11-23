@@ -13,9 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ @import "font-awesome";
+ 
  body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0;
+  background-color: #F0F2F5;
 }
