@@ -1,12 +1,13 @@
 <div class="banner">
 </div>
-<div class="new-btn-container">
-  <div class="new-btn">
-    <% if user_signed_in? %>
-      <%= link_to "Nouvel élu", new_representative_path, class: "btn btn-flat" %>
-    <% end %>
+
+<% if user_signed_in? %>
+  <div class="new-btn-container">
+    <div class="new-btn">
+        <%= link_to "Nouvel élu", new_representative_path, class: "btn btn-flat" %>
+    </div>
   </div>
-</div>
+<% end %>
 
 <div class="representatives-container">
   <h1>Representative index</h1>
