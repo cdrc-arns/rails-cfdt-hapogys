@@ -11,6 +11,7 @@
 <% end %>
 
 <div class="articles-container">
+  <h2>Actualités</h2>
   <div class="card-container">
         <% @articles.each do |article| %>
           <div class="card-wrapper">
@@ -59,3 +60,59 @@
         <% end %>
   </div>
 </div>
+
+<% if @nao_articles %>
+  <div class="nao-container">
+    <h2>NAO</h2>
+    <div class="card-container">
+        <% @nao_articles.each do |nao_article| %>
+          <div class="card-wrapper">
+            <div class="card-photo">
+              <% if nao_article.photo.key %>
+                <%= cl_image_tag nao_article.photo.key, class: "article-img" %>
+              <% else %>
+                <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669048484/vtnlkwtj3xuyqmeicgag.jpg" alt="#">
+              <% end %>
+            </div>
+              <div class="card-elements">
+
+                <div class="card-content">
+
+                  <div class="card-title">
+                    <p><%= nao_article.titre %></p>
+
+                    <% if user_signed_in? %>
+                      <div class="user-buttons">
+                        <%= link_to edit_article_path(nao_article), class: 'btn btn-flat' do %>
+                          <i class="fa-solid fa-pencil"></i>
+                        <% end %>
+                          <%= link_to article_path(nao_article) ,
+                            method: :delete,
+                            data: { confirm: "Confirmer la suppression de l'article ?" }, class: "btn btn-flat" do %>
+                            <i class="fa-solid fa-trash"></i>
+                          <% end %>
+                      </div>
+                    <% end %>
+                  </div>
+
+                  <div class="card-description">
+                    <p><%= nao_article.description %></p>
+                  </div>
+                </div>
+
+                <div class="card-attachment">
+                      <div class="ghost">
+                      </div>
+                      <div class="attachment-button">
+                        <%= link_to "Ouvrir le document", nao_article.file_url, target: :_blank, class: "dl-link" %>
+                      </div>
+                    </div>
+              </div>
+          </div>
+        <% end %>
+  </div>
+
+  </div>
+<% else %>
+
+<% end %>

@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
       }
     else
       @articles = Article.all.order('created_at DESC')
+      @nao_articles = Article.where(titre: 'NAO')
     end
   end
 
