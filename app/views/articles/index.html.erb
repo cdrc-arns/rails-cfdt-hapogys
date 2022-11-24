@@ -10,8 +10,11 @@
   </div>
 <% end %>
 
-<div class="articles-container">
+<div class="container-title">
   <h2>Actualités</h2>
+</div>
+<div class="articles-container">
+
   <div class="card-container">
         <% @articles.each do |article| %>
           <div class="card-wrapper">
@@ -61,9 +64,15 @@
   </div>
 </div>
 
-<% if @nao_articles %>
-  <div class="nao-container">
+<% if @nao_articles.present? %>
+  <div class="container-title">
     <h2>NAO</h2>
+  </div>
+  <% else %>
+  <% end %>
+  
+  <div class="nao-container">
+
     <div class="card-container">
         <% @nao_articles.each do |nao_article| %>
           <div class="card-wrapper">
@@ -113,6 +122,3 @@
   </div>
 
   </div>
-<% else %>
-
-<% end %>

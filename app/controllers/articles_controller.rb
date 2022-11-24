@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
       }
     else
       @articles = Article.all.order('created_at DESC')
-      @nao_articles = Article.where(titre: 'NAO')
+      @nao_articles = Article.where("titre LIKE ?", "%" + 'NAO' + "%")
     end
   end
 
