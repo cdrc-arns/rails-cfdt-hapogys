@@ -9,42 +9,71 @@
   </div>
 <% end %>
 
+<!--REPRESENTATIVES CARDS-->
 <div class="representatives-container">
-    <div class="card-container">
-          <% @representatives.each do |representative| %>
-            <div class="card-wrapper">
-              <div class="card-photo">
+
+    <!--representatives card-->
+      <% @representatives.each do |representative| %>
+        <div class="rep-card">
+
+          <!--LEFT CARD PART-->
+            <div class="rep-card-left">
+              <div class="rep-card-photo">
                 <% if representative.photo.key %>
                   <%= cl_image_tag representative.photo.key, class: "article-img" %>
                 <% else %>
                   <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669048484/vtnlkwtj3xuyqmeicgag.jpg" alt="#">
                 <% end %>
               </div>
-                <div class="card-elements">
-                  <div class="card-content">
-                    <div class="card-title">
-                      <p><%= representative.titre %></p>
+            </div>
 
-                      <% if user_signed_in? %>
-                        <div class="user-buttons">
-                          <%= link_to edit_representative_path(representative), class: 'btn btn-flat' do %>
-                            <i class="fa-solid fa-pencil"></i>
-                          <% end %>
-                          <%= link_to representative_path(representative) ,
-                            method: :delete,
-                            data: { confirm: "Confirmer la suppression de l'élu ?" }, class: "btn btn-flat" do %>
-                              <i class="fa-solid fa-trash"></i>
+            <!--RIGHT CARD PART-->
+              <div class="rep-card-right">
+
+                <!--top content-->
+                  <div class="rep-card-top">
+
+                    <!--rep card title-->
+                    <div class="rep-card-title">
+                      <h3><%= representative.titre %></h3>
+                        <!--divider-->
+                          <div class="rep-divider">
+                          </div>
+                    </div>
+
+                      <!--rep user buttons-->
+                        <div class="rep-user-buttons">
+                          <% if user_signed_in? %>
+                            <div class="user-buttons">
+                              <%= link_to edit_representative_path(representative), class: 'btn btn-flat' do %>
+                                <i class="fa-solid fa-pencil"></i>
+                              <% end %>
+                              <%= link_to representative_path(representative) ,
+                                  method: :delete,
+                                  data: { confirm: "Confirmer la suppression de l'élu ?" }, class: "btn btn-flat" do %>
+                                    <i class="fa-solid fa-trash"></i>
+                              <% end %>
+                            </div>
                           <% end %>
                         </div>
-                      <% end %>
+                  </div>
+
+                  <!--rep card bottom-->
+                    <div class="rep-card-bottom">
+                      <!--rep card description-->
+                      <div class="rep-card-description">
+                        <p><%= representative.description %></p>
+                      </div>
+
+                      <!--contact button-->
+                      <div class="rep-contact">
+                      <div class="contact-button">
+                        <%= mail_to "valeriea2@wanadoo.fr", 'Contacter' %>
+                      </div>
+                    </div>
                     </div>
 
-                    <div class="card-description">
-                      <p><%= representative.description %></p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          <% end %>
-    </div>
+              </div>
+        </div>
+      <% end %>
 </div>

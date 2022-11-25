@@ -37,3 +37,178 @@
   margin-bottom: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+// REPRESENTATIVES CARDS
+
+// Overall design
+.representatives-container {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+// responsive
+@media (min-width: 640px) {
+  .representatives-container {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .representatives-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .representatives-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .representatives-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1536px) {
+  .representatives-container {
+    width: 100%;
+  }
+}
+
+// card overall design
+.rep-card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
+  height: 350px;
+  margin: 0 auto;
+  width: 800px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+// responsive
+@media (max-width: 580px) {
+  .rep-card {
+    height: 350px;
+    overflow: visible;
+  }
+}
+
+// rep card left
+.rep-card-left {
+  width: 30%;
+  height: 100%;
+}
+
+.rep-card-photo {
+width: 100%;
+height: 100%;
+}
+
+.rep-card-photo img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+// REP CARD LEFT
+.rep-card-right {
+  width: 70%;
+  height: 100%;
+}
+
+// rep card top content
+.rep-card-top {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// rep card title
+.rep-card-title {
+  margin-left: 15px;
+  align-items: center;
+}
+
+.rep-card-title h3 {
+  margin-top: 20px;
+  font-size: 32px;
+  color: #DF5A25;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+// rep divider
+.rep-divider {
+  background: #DF5A25;
+  height: 2px;
+  margin: 5px auto;
+  width: 200px;
+}
+
+// rep user card buttons
+.rep-user-buttons {
+  align-items: center;
+  height: 100%;
+}
+
+// rep card bottom
+.rep-card-bottom {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// rep card description
+.rep-card-description {
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+.rep-card-description p {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 14px;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+// rep contact button
+.rep-contact {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+}
+
+.contact-button {
+  background-color: #DF5A25;
+  height: 40px;
+  width: 160px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.contact-button a {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  &:hover {
+    color: black;
+  }
+}
