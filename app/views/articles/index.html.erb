@@ -15,57 +15,73 @@
     <h2>Actualités</h2>
   </div>
   <div class="arrow-right"></div>
-
 </div>
-<div class="articles-container">
 
-  <div class="card-container">
-        <% @articles.each do |article| %>
-          <div class="card-wrapper">
-            <div class="card-photo">
-              <% if article.photo.key %>
-                <%= cl_image_tag article.photo.key, class: "article-img" %>
-              <% else %>
-                <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669048484/vtnlkwtj3xuyqmeicgag.jpg" alt="#">
-              <% end %>
-            </div>
-              <div class="card-elements">
+<!--ARTICLES CARDS-->
+<div class="card-container">
 
-                <div class="card-content">
+  <!--CARD-->
+  <% @articles.each do |article| %>
+    <div class="card">
 
-                  <div class="card-title">
-                    <p><%= article.titre %></p>
+      <!--LEFT CARD PART-->
+      <div class="card-left">
+        <div class="card-photo">
+          <% if article.photo.key %>
+            <%= cl_image_tag article.photo.key, class: "article-img" %>
+          <% else %>
+              <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669048484/vtnlkwtj3xuyqmeicgag.jpg" alt="#">
+          <% end %>
+        </div>
+      </div>
 
-                    <% if user_signed_in? %>
-                      <div class="user-buttons">
-                        <%= link_to edit_article_path(article), class: 'btn btn-flat' do %>
-                          <i class="fa-solid fa-pencil"></i>
-                        <% end %>
-                          <%= link_to article_path(article) ,
-                            method: :delete,
-                            data: { confirm: "Confirmer la suppression de l'article ?" }, class: "btn btn-flat" do %>
-                            <i class="fa-solid fa-trash"></i>
-                          <% end %>
-                      </div>
-                    <% end %>
-                  </div>
+      <!--RIGHT CARD PART-->
+      <div class="card-right">
+        <!--card top content-->
+          <div class="top-content">
+            <!--user buttons-->
+            <% if user_signed_in? %>
+              <div class="user-buttons">
+                <%= link_to edit_article_path(article), class: 'btn btn-flat' do %>
+                  <i class="fa-solid fa-pencil"></i>
+                <% end %>
 
-                  <div class="card-description">
-                    <p><%= article.description %></p>
-                  </div>
+                <%= link_to article_path(article) ,
+                  method: :delete,
+                  data: { confirm: "Confirmer la suppression de l'article ?" }, class: "btn btn-flat" do %>
+                    <i class="fa-solid fa-trash"></i>
+                <% end %>
+              </div>
+            <% end %>
+
+
+              <!--card title-->
+              <div class="card-title">
+                <h3><%= article.titre %></h3>
+              </div>
+
+                <!--card divider-->
+                <div class="divider">
+                </div>
+          </div>
+
+              <!--card bottom content-->
+              <div class="bottom-content">
+                <!--card description-->
+                <div class="card-description">
+                  <p><%= article.description %></p>
                 </div>
 
-                <div class="card-attachment">
-                      <div class="ghost">
-                      </div>
-                      <div class="attachment-button">
-                        <%= link_to "Ouvrir le document", article.file_url, target: :_blank, class: "dl-link" %>
-                      </div>
+                  <!--card attachment button-->
+                  <div class="card-attachment">
+                    <div class="attachment-button">
+                      <%= link_to "Ouvrir le document", article.file_url, target: :_blank, class: "dl-link" %>
                     </div>
+                  </div>
               </div>
-          </div>
-        <% end %>
-  </div>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 <% if @nao_articles.present? %>
