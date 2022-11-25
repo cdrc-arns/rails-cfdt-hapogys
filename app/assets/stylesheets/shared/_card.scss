@@ -3,6 +3,7 @@
 // CARD CONTAINER
 .card-container {
   margin-top: 40px;
+  margin-bottom: 40px;
   width: 100%;
   display: grid;
 }
@@ -11,13 +12,11 @@
 @media (min-width: 640px) {
   .card-container {
     width: 100%;
-    grid-template-columns: repeat(1, minmax(0, 1fr) );
   }
 }
 @media (min-width: 768px) {
   .card-container {
     width: 100%;
-    grid-template-columns: repeat(1, minmax(0, 1fr) );
   }
 }
 @media (min-width: 1024px) {
@@ -48,7 +47,7 @@
   margin: 0 auto;
   width: 600px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: flex;
 }
 
@@ -179,6 +178,180 @@
 }
 
 .attachment-button a {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  &:hover {
+    color: black;
+  }
+}
+
+// NAO CARDS DESIGN
+.nao-container {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+// responsive
+@media (min-width: 640px) {
+  .nao-container {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .nao-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .nao-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .nao-container {
+    width: 100%;
+  }
+}
+@media (min-width: 1536px) {
+  .nao-container {
+    width: 100%;
+  }
+}
+
+// CARD OVERALL DESIGN
+
+.nao-card {
+  background-color: white;
+  border-radius: 1px;
+  box-shadow: 0 0 2px -1px rgba(0, 0, 0, 0.75);
+  height: 350px;
+  margin: 0 auto;
+  width: 800px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+// responsive
+@media (max-width: 580px) {
+  .nao-card {
+    height: 350px;
+    overflow: visible;
+  }
+}
+
+// NAO CARD LEFT DESIGN
+.nao-card-left {
+    width: 30%;
+    height: 100%;
+}
+
+.nao-card-photo {
+  width: 100%;
+  height: 100%;
+}
+
+.nao-card-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+// NAO CARD RIGHT DESIGN
+.nao-card-right {
+  width: 70%;
+  height: 100%;
+}
+
+// nao card top content
+.nao-card-top-content {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// nao card title
+.nao-card-title {
+  margin-left: 15px;
+  align-items: center;
+}
+
+.nao-card-title h3 {
+  margin-top: 20px;
+  font-size: 32px;
+  color: #DF5A25;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+// nao divider
+.nao-divider {
+  background: #DF5A25;
+  height: 2px;
+  margin: 5px auto;
+  width: 200px;
+}
+
+// nao user card buttons
+.nao-user-buttons {
+  align-items: center;
+  height: 100%;
+}
+
+// nao card bottom content
+.nao-card-bottom-content {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// nao card description
+.nao-card-description {
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+.nao-card-description p {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 14px;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+// nao attachment button
+.nao-attachment {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+}
+
+.nao-button {
+  background-color: #DF5A25;
+  height: 40px;
+  width: 160px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.nao-button a {
   color: white;
   font-size: 14px;
   font-weight: 700;

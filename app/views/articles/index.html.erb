@@ -84,6 +84,7 @@
   <% end %>
 </div>
 
+<!--NAO SPECIFIC TITLE-->
 <% if @nao_articles.present? %>
   <div class="container-title">
     <div class="title">
@@ -94,54 +95,73 @@
   <% else %>
   <% end %>
 
+<!--NAO CARDS-->
   <div class="nao-container">
 
-    <div class="card-container">
-        <% @nao_articles.each do |nao_article| %>
-          <div class="card-wrapper">
-            <div class="card-photo">
+    <!--nao card-->
+    <% @nao_articles.each do |nao_article| %>
+      <div class="nao-card">
+
+        <!--LEFT CARD PART-->
+          <div class="nao-card-left">
+            <div class="nao-card-photo">
               <% if nao_article.photo.key %>
                 <%= cl_image_tag nao_article.photo.key, class: "article-img" %>
               <% else %>
                 <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669048484/vtnlkwtj3xuyqmeicgag.jpg" alt="#">
               <% end %>
             </div>
-              <div class="card-elements">
+          </div>
+              <!--RIGHT CARD PART-->
+              <div class="nao-card-right">
 
-                <div class="card-content">
+                <!--top content-->
+                <div class="nao-card-top-content">
 
-                  <div class="card-title">
-                    <p><%= nao_article.titre %></p>
+                  <!--nao card title-->
+                  <div class="nao-card-title">
+                    <h3><%= nao_article.titre %></h3>
+                      <!--card divider-->
+                      <div class="nao-divider">
+                      </div>
+                  </div>
 
-                    <% if user_signed_in? %>
-                      <div class="user-buttons">
-                        <%= link_to edit_article_path(nao_article), class: 'btn btn-flat' do %>
-                          <i class="fa-solid fa-pencil"></i>
-                        <% end %>
+                    <!--nao card user buttons-->
+                    <div class="nao-user-buttons">
+                      <% if user_signed_in? %>
+                        <div class="user-buttons">
+                          <%= link_to edit_article_path(nao_article), class: 'btn btn-flat' do %>
+                            <i class="fa-solid fa-pencil"></i>
+                          <% end %>
                           <%= link_to article_path(nao_article) ,
                             method: :delete,
                             data: { confirm: "Confirmer la suppression de l'article ?" }, class: "btn btn-flat" do %>
-                            <i class="fa-solid fa-trash"></i>
+                              <i class="fa-solid fa-trash"></i>
                           <% end %>
-                      </div>
-                    <% end %>
-                  </div>
-
-                  <div class="card-description">
-                    <p><%= nao_article.description %></p>
-                  </div>
+                        </div>
+                      <% end %>
+                    </div>
                 </div>
 
-                <div class="card-attachment">
-                      <div class="ghost">
-                      </div>
-                      <div class="attachment-button">
+
+                <!--nao bottom content-->
+                <div class="nao-card-bottom-content">
+
+                  <!--nao card description-->
+                  <div class="nao-card-description">
+                    <p><%= nao_article.description %></p>
+                  </div>
+
+                    <!--nao card attachment button-->
+                    <div class="nao-attachment">
+                      <div class="nao-button">
                         <%= link_to "Ouvrir le document", nao_article.file_url, target: :_blank, class: "dl-link" %>
                       </div>
                     </div>
-              </div>
-          </div>
-        <% end %>
-  </div>
 
+                </div>
+
+              </div>
+      </div>
+    <% end %>
   </div>
