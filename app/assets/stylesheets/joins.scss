@@ -4,8 +4,11 @@
 
 // JOINS INDEX
 .joins-container {
-  margin-top: 20pxpx;
+  margin-top: 20px;
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 // banner image
