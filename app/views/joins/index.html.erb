@@ -20,4 +20,21 @@
             </div>
           <% end %>
     </div>
+
+    <div class="button-container">
+          <% @joins.each do |join| %>
+            <div class="button-wrapper">
+              <div class="dl-button">
+                <%= link_to "Télécharger le livret de bienvenue", join.file_two_url, target: :_blank, class: "dl-link" %>
+              </div>
+              <% if user_signed_in? %>
+                  <div class="user-actions">
+                    <%= link_to edit_join_path(join), class: 'btn btn-flat' do %>
+                      Modifier le document
+                    <% end %>
+                  </div>
+              <% end %>
+            </div>
+          <% end %>
+    </div>
 </div>

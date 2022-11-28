@@ -47,6 +47,6 @@ class JoinsController < ApplicationController
   end
 
   def join_params
-    params.require(:join).permit(:file)
+    params.require(:join).permit(:file, :file_two)
   end
 end
