@@ -7,6 +7,7 @@
   justify-content: center;
   height: 80px;
   margin-top: auto;
+  width: 100%;
 }
 
 .foot-links {
@@ -26,5 +27,16 @@
 
   :hover {
     color: black;
+  }
+}
+
+@media (max-width: 580px) {
+  .footer-container {
+    height: 40px;
+  }
+
+  .foot-links i, .nav-items a {
+    font-size: 12px;
+    margin: 5px;
   }
 }
