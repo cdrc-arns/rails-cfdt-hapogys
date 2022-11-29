@@ -11,6 +11,12 @@
   justify-content: space-evenly;
 }
 
+@media (max-width: 580px) {
+  .joins-container {
+    flex-direction: column;
+  }
+}
+
 // banner image
 .banner {
   display: flex;
