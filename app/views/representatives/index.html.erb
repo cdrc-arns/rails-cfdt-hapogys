@@ -33,15 +33,7 @@
                 <!--top content-->
                   <div class="rep-card-top">
 
-                    <!--rep card title-->
-                    <div class="rep-card-title">
-                      <h3><%= representative.titre.capitalize %></h3>
-                        <!--divider-->
-                          <div class="rep-divider">
-                          </div>
-                    </div>
-
-                      <!--rep user buttons-->
+                    <!--rep user buttons-->
                         <div class="rep-user-buttons">
                           <% if user_signed_in? %>
                             <div class="user-buttons">
@@ -56,6 +48,15 @@
                             </div>
                           <% end %>
                         </div>
+                        
+                    <!--rep card title-->
+                    <div class="rep-card-title">
+                      <h3><%= representative.titre.capitalize %></h3>
+                        <!--divider-->
+                          <div class="rep-divider">
+                          </div>
+                    </div>
+
                   </div>
 
                   <!--rep card bottom-->

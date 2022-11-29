@@ -94,6 +94,7 @@
 @media (max-width: 580px) {
   .rep-card {
     height: 350px;
+    width: 380px;
     overflow: visible;
   }
 }
@@ -102,6 +103,12 @@
 .rep-card-left {
   width: 30%;
   height: 100%;
+}
+
+@media (max-width: 580px) {
+  .rep-card-left {
+    width: 50%;
+  }
 }
 
 .rep-card-photo {
@@ -115,10 +122,16 @@ width: 100%;
 object-fit: cover;
 }
 
-// REP CARD LEFT
+// REP CARD RIGHT
 .rep-card-right {
   width: 70%;
   height: 100%;
+}
+
+@media (max-width: 580px) {
+  .rep-card-right {
+    width: 50%;
+  }
 }
 
 // rep card top content
@@ -127,13 +140,22 @@ object-fit: cover;
   height: 30%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+@media (max-width: 580px) {
+  .rep-card-top {
+    flex-direction: column;
+  }
 }
 
 // rep card title
 .rep-card-title {
   margin-left: 15px;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .rep-card-title h3 {
@@ -145,6 +167,21 @@ object-fit: cover;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+@media (max-width: 580px) {
+  .rep-card-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .rep-card-title h3 {
+    font-size: 20px;
+  }
+}
+
 // rep divider
 .rep-divider {
   background: #DF5A25;
@@ -153,8 +190,15 @@ object-fit: cover;
   width: 200px;
 }
 
+@media (max-width: 580px) {
+  .rep-divider {
+    width: 40px;
+  }
+}
+
 // rep user card buttons
 .rep-user-buttons {
+  width: 100%;
   align-items: center;
   height: 100%;
 }
@@ -165,7 +209,7 @@ object-fit: cover;
   height: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 // rep card description
@@ -182,11 +226,21 @@ object-fit: cover;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+@media (max-width: 580px) {
+  .rep-card-description p {
+    text-align: center;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
 // rep contact button
 .rep-contact {
   width: 100%;
   display: flex;
-  margin-bottom: 15px;
   justify-content: flex-end;
 }
 
