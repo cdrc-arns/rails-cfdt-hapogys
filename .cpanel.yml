@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/attelage/public_html/
-    - /bin/cp -R images $DEPLOYPATH
+    - export DEPLOYPATH=/home/cpanelUser/public_html/
+    - /bin/cp -R * $DEPLOYPATH
