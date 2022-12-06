@@ -1,170 +1,161 @@
-// // navbar layout
-// // .navbar {
-// //   flex-grow: 0;
-// //   background-color: white;
-// //   display: flex;
-// //   flex-wrap: inherit;
-// //   align-items: center;
-// //   justify-content: space-between;
-// //   height: 80px;
-// //   margin-bottom: 20px;
-// //   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
-// //   position: fixed;
-// //   width: 100%;
-// // }
+// navbar layout
+.navbar-main {
+  flex-grow: 0;
+  background-color: white;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  margin-bottom: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
+  position: fixed;
+  width: 100%;
+}
 
-// // navbar logo
-// // .nav-logo {
-// //   margin-left: 10px;
-// //   display: flex;
-// //   align-items: center;
-// //   justify-content: center;
-// // }
+.nav-logo {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-// // .navbar-brand {
-// //   margin-right: 10px;
-// //   display: flex;
-// //   justify-content: center;
-// //   align-items: center;
-// //   text-decoration: none;
-// // }
+.navbar-brand {
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 
-// // .navbar-brand img {
-// //   width: 60px;
-// //   margin-right: 10px;
-// // }
+.navbar-brand img {
+  width: 60px;
+  margin-right: 10px;
+}
 
-// .navbar-brand p {
-//   margin: 0;
-//   font-size: 20px;
-//   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-//   color: #DF5A25;
-//   font-weight: 600;
-// }
+.navbar-brand p {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #DF5A25;
+  font-weight: 600;
+}
 
-// // navbar links
-// .nav-links {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin-left: 20px;
-//   margin-right: 10px;
-// }
+// navbar links
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 10px;
+}
 
-// .nav-link {
-//   text-decoration: none;
-//   color: black;
-//   letter-spacing: 0.5px;
-// }
+.nav-link {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.5px;
+}
 
-// .nav-links li {
-//   list-style-type: none;
-//   margin: 10px;
-//   font-size: 18px;
-//   font-weight: 500;
-//   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.nav-links li {
+  list-style-type: none;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
-//   :hover {
-//     color: #DF5A25;
-//     text-decoration: underline;
-//   }
-// }
+  :hover {
+    color: #DF5A25;
+    text-decoration: underline;
+  }
+}
 
-// .nav-item a {
-//   transition: 0,4s ease-in-out;
-// }
+.nav-item a {
+  transition: 0,4s ease-in-out;
+}
 
-// // unlog button
-// .log-btn {
-//   background-color: #DF5A25;
-//   border: none;
-//   border-radius: 5px;
-//   font-size: 18px;
-//   height: 30px;
-//   cursor: pointer;
-//   color: white;
-// }
+// unlog button
+.log-btn {
+  background-color: #DF5A25;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+}
 
-// .log-btn:hover {
-//   color: black;
-// }
+.log-btn:hover {
+  color: black;
+}
 
-// // navbar search
-// .search {
-//   margin-right: 10px;
-// }
+// navbar search
+.search {
+  margin-right: 10px;
+}
 
-// .search-form {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-// .search-item {
-//   margin-right: 5px;
-// }
+.search-item {
+  margin-right: 5px;
+}
 
-// .search-field {
-//   height: 20px;
-//   font-size: 16px;
-//   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-// }
+.search-field {
+  height: 20px;
+  font-size: 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
-// .search-btn {
-//   background-color: #DF5A25;
-//   border: none;
-//   border-radius: 5px;
-//   font-size: 18px;
-//   height: 30px;
-//   text-align: center;
-//   cursor: pointer;
-//   color: white;
-//   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-// }
+.search-btn {
+  background-color: #DF5A25;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
-// .search-btn:hover {
-//   color: black;
-// }
+.search-btn:hover {
+  color: black;
+}
 
-// // responsive navbar design
+// responsive navbar design
 
-// // overall design
-// .topnav {
-//   background-color: white;
-//   overflow: hidden;
-//   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
-//   position: fixed;
-//   width: 100%;
-//   height: 80px;
-//   margin-bottom: 20px;
-//   display: flex;
-//   align-items: center;
-// }
+// overall design
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 4px 0px;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
 
-// // navigation toggle
-// .topnav .icon {
-//   display: none;
-// }
 
-// // responsive
-// @media screen and (max-width: 600px) {
-//   .topnav a:not(:first-child) {display: none;}
-//   .topnav a.icon {
-//     float: right;
-//     display: block;
-//   }
-// }
+// responsive
+@media screen and (max-width: 600px) {
+  .search {
+    display: none;
+  }
 
-// @media screen and (max-width: 600px) {
-//   .topnav.responsive {position: relative;}
-//   .topnav.responsive a.icon {
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//   }
-//   .topnav.responsive a {
-//     float: none;
-//     display: block;
-//     text-align: left;
-//   }
-// }
+  .navbar-brand img {
+    width: 40px;
+  }
+
+  .navbar-brand p {
+    font-size: 16px;
+  }
+
+  .nav-links li {
+    font-size: 14px;
+  }
+}
