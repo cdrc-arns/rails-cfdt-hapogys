@@ -3,6 +3,14 @@
   <%= image_tag "banner.jpg" %>
 </div>
 
+<% if user_signed_in? %>
+  <div class="new-btn-container">
+    <div class="new-btn">
+        <%= link_to "Nouveau document", new_join_path, class: "btn btn-flat" %>
+    </div>
+  </div>
+<% end %>
+
 <div class="joins-container">
   <div class="button-container">
           <% @joins.each do |join| %>
