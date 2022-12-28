@@ -6,7 +6,7 @@ class JoinsController < ApplicationController
   end
 
   def index
-      @joins = Join.all
+    @joins = Join.all
   end
 
   def edit
