@@ -47,6 +47,6 @@ class RepresentativesController < ApplicationController
   end
 
   def representative_params
-    params.require(:representative).permit(:titre, :description, :photo)
+    params.require(:representative).permit(:titre, :description, :email, :photo)
   end
 end

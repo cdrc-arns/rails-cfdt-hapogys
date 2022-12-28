@@ -48,7 +48,7 @@
                             </div>
                           <% end %>
                         </div>
-                        
+
                     <!--rep card title-->
                     <div class="rep-card-title">
                       <h3><%= representative.titre.capitalize %></h3>
@@ -69,7 +69,7 @@
                       <!--contact button-->
                       <div class="rep-contact">
                       <div class="contact-button">
-                        <%= mail_to representative.email, 'Contacter' %>
+                        <%= mail_to "#{representative.email}", 'Contacter' %>
                       </div>
                     </div>
                     </div>
