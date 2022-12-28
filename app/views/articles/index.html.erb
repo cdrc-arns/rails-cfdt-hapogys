@@ -10,7 +10,7 @@
   </div>
 <% end %>
 
-<!--NAO SPECIFIC TITLE-->
+<!--ELECTION SPECIFIC TITLE-->
 <% if @election_articles.present? %>
   <div class="container-title">
     <div class="title">
@@ -21,10 +21,10 @@
   <% else %>
   <% end %>
 
-<!--NAO CARDS-->
+<!--ELECTION CARDS-->
   <div class="nao-container">
 
-    <!--nao card-->
+    <!--election card-->
     <% @election_articles.each do |election_article| %>
       <div class="nao-card">
 
