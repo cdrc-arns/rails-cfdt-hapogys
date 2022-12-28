@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   def index
 
 
+
     if search_term = params[:search]
       search_term = params[:search].downcase.gsub(/\s+/, "")
       @articles = Article.all.select { |article|
@@ -18,6 +19,9 @@ class ArticlesController < ApplicationController
       @articles = Article.all.order('created_at DESC')
       @nao_articles = Article.where("titre LIKE ?", "%" + 'NAO' + "%")
     end
+
+    @banners = Banner.all
+
   end
 
   def edit

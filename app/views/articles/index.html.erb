@@ -1,5 +1,5 @@
 <div class="banner">
-  <%= image_tag "bandeau.png" %>
+  <%= render :partial => "banners/index" , locals: {banners: @banners} %>
 </div>
 
 <% if user_signed_in? %>

@@ -1,0 +1,17 @@
+<div class="banner">
+  <h1>NEW BANNER</h1>
+</div>
+
+<div class="form-wrapper">
+    <%= simple_form_for(@banners) do |f| %>
+      <div class="form-content">
+
+        <div class="form-input">
+          <%= f.input :photo, as: :file %>
+        </div>
+
+      <div class= "form-button">
+        <%= f.button :submit, "Valider", class: "form-button-text"%>
+      </div>
+    <% end %>
+  </div>

@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :articles
   has_many :representatives
   has_many :joins
+  has_many :banners
 end

@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :articles
   resources :representatives
   resources :joins
+  resources :banners
+
 end
