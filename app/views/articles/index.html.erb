@@ -10,6 +10,90 @@
   </div>
 <% end %>
 
+<!--NAO SPECIFIC TITLE-->
+<% if @election_articles.present? %>
+  <div class="container-title">
+    <div class="title">
+      <h2>Elections</h2>
+    </div>
+    <div class="arrow-right"></div>
+  </div>
+  <% else %>
+  <% end %>
+
+<!--NAO CARDS-->
+  <div class="nao-container">
+
+    <!--nao card-->
+    <% @election_articles.each do |election_article| %>
+      <div class="nao-card">
+
+        <!--LEFT CARD PART-->
+          <div class="nao-card-left">
+            <div class="nao-card-photo">
+              <% if election_article.photo.key %>
+                <%= cl_image_tag election_article.photo.key, class: "article-img" %>
+              <% else %>
+                <img src="https://res.cloudinary.com/dj5ui9nro/image/upload/v1669049423/development/ajwidoymuz7ox9172k9x0b59l82z.jpg" alt="#">
+              <% end %>
+            </div>
+          </div>
+              <!--RIGHT CARD PART-->
+              <div class="nao-card-right">
+
+                <!--top content-->
+                <div class="nao-card-top-content">
+
+                  <!--nao card user buttons-->
+                    <div class="nao-user-buttons">
+                      <% if user_signed_in? %>
+                        <div class="user-buttons">
+                          <%= link_to edit_article_path(election_article), class: 'btn btn-flat' do %>
+                            <i class="fa-solid fa-pencil"></i>
+                          <% end %>
+                          <%= link_to article_path(election_article) ,
+                            method: :delete,
+                            data: { confirm: "Confirmer la suppression de l'article ?" }, class: "btn btn-flat" do %>
+                              <i class="fa-solid fa-trash"></i>
+                          <% end %>
+                        </div>
+                      <% end %>
+                    </div>
+
+                  <!--nao card title-->
+                  <div class="nao-card-title">
+                    <h3><%= election_article.titre.capitalize %></h3>
+                      <!--card divider-->
+                      <div class="nao-divider">
+                      </div>
+                  </div>
+
+
+                </div>
+
+
+                <!--nao bottom content-->
+                <div class="nao-card-bottom-content">
+
+                  <!--nao card description-->
+                  <div class="nao-card-description">
+                    <p><%= election_article.description %></p>
+                  </div>
+
+                    <!--nao card attachment button-->
+                    <div class="nao-attachment">
+                      <div class="nao-button">
+                        <%= link_to "Ouvrir le document", election_article.file_url, target: :_blank, class: "dl-link" %>
+                      </div>
+                    </div>
+
+                </div>
+
+              </div>
+      </div>
+    <% end %>
+  </div>
+
 <div class="container-title">
   <div class="title">
     <h2>Actualités</h2>
