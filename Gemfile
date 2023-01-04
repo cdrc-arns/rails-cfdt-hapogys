@@ -56,3 +56,5 @@ gem "cloudinary"
 gem "carrierwave"
 gem "font-awesome-sass", "~> 6.2.1"
 # gem 'bootstrap-sass'
+gem "figaro"
+gem "fog-aws"
